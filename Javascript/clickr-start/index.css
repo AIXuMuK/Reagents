@@ -21,7 +21,7 @@ main {
     align-items: center;
 }
 
-#button {
+button {
     --color: firebrick;
     --border-color: firebrick;
     --shadow-color: rgb(112, 20, 20);
@@ -61,7 +61,7 @@ main {
                 -6px 3px var(--shadow-color);
 }
 
-#button:active {
+button:active {
     top: 6px;
 	box-shadow: 0 -3px var(--color),
                 3px 0 var(--color),
