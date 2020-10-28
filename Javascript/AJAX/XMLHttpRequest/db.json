@@ -34,6 +34,14 @@
       "sex": "male",
       "age": 30,
       "photo": "https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/30/2016/12/George-Michael-Wham.jpg"
+    },
+    {
+      "name": "Arthas",
+      "surname": "Menethil",
+      "sex": "male",
+      "age": "31",
+      "photo": "https://giantbomb1.cbsistatic.com/uploads/scale_small/0/1480/187705-arthas.jpg",
+      "id": "0.3242200089896303"
     }
   ]
 }

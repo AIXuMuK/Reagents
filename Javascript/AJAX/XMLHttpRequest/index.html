@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="app"></div>
-        <button>Click</button>
+    <div class="app">
+        <button class="clickMe">Нажми меня</button>
+    </div>
+    <form action="" id="myForm">
+        <input type="text" id="name" name="name" placeholder="name" required>
+        <input type="text" id="surname" name="surname" placeholder="surname" required>
+        <select name="sex" id="sex" required>
+            <option value="gender" disabled selected>Gender select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="number" id="age" name="age" placeholder="age">
+        <input type="text" id="photo" name="photo" placeholder="url photo">
+
+        <button class="submitBtn">Отправить</button>
+    </form>
+        
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
 </body>

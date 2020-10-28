@@ -1,6 +1,10 @@
-window.addEventListener("DOMContentLoaded", () =>{
+window.addEventListener("DOMContentLoaded", () => {
 
-    function req() {
+    const showPeopleBtn = document.querySelector('.clickMe');
+    const form = document.querySelector('form');
+    
+    function showPeopleCard() {
+
         const request = new XMLHttpRequest();
         request.open("GET", "http://localhost:3000/people");
         request.setRequestHeader("Content-type", "application/json; charset=utf-8");
@@ -9,8 +13,7 @@ window.addEventListener("DOMContentLoaded", () =>{
         request.addEventListener("load", function() {
             if (request.readyState === 4 && request.status == 200) {
                 let data = JSON.parse(request.response);
-                console.log(data);
-
+                
                 data.forEach(item => {
                     let card = document.createElement('div');
 
@@ -42,7 +45,30 @@ window.addEventListener("DOMContentLoaded", () =>{
         });
         this.remove();
     }
+    showPeopleBtn.addEventListener('click', showPeopleCard, {"once":true});
 
-    document.querySelector('button').addEventListener('click', req, {"once": true});
 
+    function createNewPeople(event) {
+        event.preventDefault();
+        
+        let formData = new FormData(form);
+        formData.append("id", Math.random());
+        
+        let obj = {};
+        formData.forEach((value, key) => {
+            obj[key] = value;
+        });
+        let json = JSON.stringify(obj);
+
+        const request = new XMLHttpRequest();
+        request.open("POST", "http://localhost:3000/people");
+        request.setRequestHeader("Content-type", "application/json; charset=utf-8");
+        request.send(json);
+        
+        document.getElementById("myForm").reset(); 
+    }
+     
+    form.addEventListener('submit', (event) => createNewPeople(event), {"once": true});
+
+    
 });
