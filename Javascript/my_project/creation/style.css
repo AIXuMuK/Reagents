@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
 
-    background: url("images/login_image.jpg") no-repeat center;
+    background: url("../images/login_image.jpg") no-repeat center;
     background-color: #031229;
 }
 
@@ -22,7 +22,7 @@ input {
     padding: 6px 5px;
     border: 2px black solid;
     font-family: 'Open Sans', sans-serif;
-    outline:none;
+
     border-radius: 5px;
     
 }
@@ -42,7 +42,7 @@ input {
     padding: 12px 7px;
     border-radius: 5px;
     border: 2px solid black;
-    cursor: pointer;
+    
     transition: background .1s
     linear, color .1s linear;
        
@@ -69,8 +69,6 @@ i {
     margin-left: -30px;
     cursor: pointer;
 }
-
-
 
 
 
